@@ -1,0 +1,40 @@
+.bg {
+    background-color: black;
+    padding: 4em 0em;
+    h3 {
+        color: #e56217;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2rem;
+        span {
+            color: #f49507;
+        }
+    }
+}
+.review {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1em, 1vw, 1.5em);
+    padding-top: 2em;
+    .arrow {
+        color: white;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+    }
+    .comment {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        // outline: 2px solid red;
+        text-align: center;
+        width: clamp(20em, 22vw, 22em);
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    .line {
+        display: flex;
+        align-items: center;
+    }
+}

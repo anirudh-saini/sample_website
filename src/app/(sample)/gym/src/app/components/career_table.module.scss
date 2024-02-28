@@ -1,0 +1,45 @@
+.container {
+    background-color: #131313;
+    padding-block: 4em;
+    .career {
+        width: min(83em, 88%);
+        margin: auto;
+        color: white;
+        .head {
+            padding-bottom: 2em;
+            h2 {
+                font-size: clamp(1.5rem, 3vw, 3rem);
+                font-weight: 700;
+            }
+        }
+        .table {
+            font-size: clamp(0.7rem, 2vw, 1.6rem);
+            table {
+                border-top: 0.1em solid white;
+                width: 100%;
+                padding-top: 1em;
+
+                // border-spacing: 1em;
+                tbody {
+                    // display: grid;
+                    // gap: 1em;
+
+                    tr {
+                        // outline: 2px solid red;
+                        > :nth-child(2) {
+                            padding-inline-end: 7em;
+                            // text-align: center;
+                        }
+                        td {
+                            padding-block: 0.5em;
+                            // outline: 2px solid blue;
+                        }
+                        // display: flex;
+                        // flex-direction: column;
+                        // justify-content: space-between;s
+                    }
+                }
+            }
+        }
+    }
+}

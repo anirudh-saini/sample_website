@@ -1,0 +1,104 @@
+.heading {
+    text-align: center;
+    padding-top: 3em;
+    &_1 {
+        color: #e56217;
+        font-weight: 700;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+    &_2 {
+        color: #f49507;
+        font-weight: 700;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+    &_3 {
+        color: white;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 3em 0em 5em 0em;
+    > :nth-child(odd) {
+        // outline: 2px solid red;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 2em;
+        @media (max-width: 1210px) {
+            // outline: 3px solid red;
+            flex-direction: column;
+            align-items: center;
+        }
+        .heading {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            max-width: 38.3em;
+            align-content: center;
+            @media (max-width: 1210px) {
+                text-align: center;
+            }
+            h3 {
+                color: #e56217;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            p {
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+        }
+        .img {
+            img {
+                width: clamp(19em, 34vw, 34em);
+            }
+            // width: min(100%, 34.25em);
+            display: flex;
+            justify-content: center;
+        }
+    }
+    > :nth-child(even) {
+        // outline: 2px solid blue;
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        @media (max-width: 1210px) {
+            // outline: 3px solid red;
+            flex-direction: column;
+            align-items: center;
+        }
+        .heading {
+            max-width: 38.3em;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-content: center;
+            @media (max-width: 1210px) {
+                text-align: center;
+            }
+            h3 {
+                color: #f49507;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            p {
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+        }
+        .img {
+            img {
+                width: clamp(19em, 34vw, 34em);
+            }
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,225 @@
+.carousel {
+    --items: 6;
+    --width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(var(--items), var(--width));
+    // outline: 2px solid red;
+    gap: 1em;
+
+    overflow: auto hidden;
+    scroll-snap-type: inline mandatory;
+    position: relative;
+    width: min(94%, 80em);
+    margin: auto;
+    scroll-behavior: smooth;
+    transition: all ease-in-out;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (min-width: 641px) {
+        overflow: hidden;
+        scroll-snap-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    .item {
+        width: var(--width);
+        // background-color: red;
+        scroll-snap-align: center;
+        .card {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            @media (min-width: 641px) {
+                gap: 2em;
+                justify-content: space-between;
+            }
+            @media (min-width: 641px) {
+                > div {
+                    width: 50%;
+                    img {
+                        // outline: 2px solid yellow;
+                    }
+                }
+            }
+            &_content {
+                @media (min-width: 641px) {
+                    // outline: 2px solid red;
+                }
+                p {
+                    // font-size: clamp(1.2rem, 2vw, 1.5rem);
+                    // @media (min-width: 641px) {
+                    //     font-size: clamp(1.4rem, 1vw, 1.5rem);
+                    // }
+                    @media (min-width: 1000px) {
+                        font-size: clamp(1.1rem, 1vw, 1.5rem);
+                    }
+                    @media (min-width: 1315px) {
+                        font-size: clamp(0.8rem, 2vw, 1.5rem);
+                    }
+                }
+                &_head {
+                    p {
+                        font-weight: 700;
+                        // font-size: 1.75rem;
+                        // @media (min-width: 641px) {
+                        //     font-size: clamp(1.4rem, 1vw, 1.75rem);
+                        // }
+                        @media (min-width: 1000px) {
+                            font-size: clamp(1.3rem, 1vw, 1.75rem);
+                        }
+                        @media (min-width: 1315px) {
+                            font-size: clamp(1rem, 2vw, 1.75rem);
+                        }
+                    }
+                }
+            }
+        }
+        .content {
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            gap: 1em;
+            overscroll-behavior-inline: contain;
+            scroll-snap-type: inline mandatory;
+            text-align: center;
+            padding-top: 1em;
+            @media (min-width: 641px) {
+                // outline: 2px solid blue;
+                overflow-x: none;
+                overscroll-behavior-inline: none;
+                scroll-snap-type: none;
+                display: flex;
+                // align-items: center;
+                justify-content: center;
+            }
+            > * {
+                min-width: 100%;
+                scroll-snap-align: center;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
+                @media (min-width: 641px) {
+                    &:nth-child(even) {
+                        // outline: 2px solid red;
+                        .content_para {
+                            // outline: 2px solid blue;
+                            border-inline: 2px solid black;
+                            padding-inline: clamp(0.8em, 2vw, 2em);
+                        }
+                    }
+
+                    min-width: 0;
+                    // width: 19em;
+                    max-width: 22.5em;
+                    font-size: clamp(0.7rem, 1vw, 1.5rem);
+                    // scroll-snap-align: none;
+                }
+                @media (min-width: 800px) {
+                    font-size: 0.8rem;
+                }
+                @media (min-width: 900px) {
+                    font-size: 0.9rem;
+                }
+                @media (min-width: 1000px) {
+                    font-size: clamp(0.8rem, 1vw, 1.5rem);
+                }
+                @media (min-width: 1315px) {
+                    font-size: clamp(0.8rem, 2vw, 1.5rem);
+                }
+                a {
+                    font-size: 1.25rem;
+                    color: black;
+                    text-decoration: none;
+                    @media (min-width: 641px) {
+                        font-size: clamp(0.8rem, 1vw, 1.2rem);
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        .radio {
+            // outline: 2px solid red;
+            text-align: center;
+            @media (min-width: 641px) {
+                display: none;
+            }
+            input {
+                accent-color: #a7c3b5;
+                background: #a7c3b5;
+            }
+        }
+        > div {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+    }
+
+    @media (min-width: 641px) {
+        > :nth-child(odd) {
+            // background-color: blue;
+
+            .card {
+                flex-direction: row;
+                &_img {
+                    // outline: 2px solid red;
+                    display: flex;
+                    justify-content: right;
+                }
+                .card_content {
+                    text-align: left;
+                }
+
+                // outline: 2px solid red;
+                // background-color: red;
+            }
+        }
+        > :nth-child(even) {
+            // background-color: blue;
+
+            .card {
+                flex-direction: row-reverse;
+                text-align: right;
+                // outline: 2px solid red;
+                // background-color: red;
+            }
+        }
+    }
+}
+.service {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-block: 4.5em;
+
+    .button {
+        // outline: 2px solid red;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 1em;
+        z-index: 2;
+        @media (min-width: 641px) {
+            display: none;
+        }
+        button {
+            border: none;
+            background: transparent;
+            width: 2em;
+            font-size: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // outline: 2px solid red;
+    color: white;
+    width: min(79em, 94%);
+    margin: auto;
+    gap: 2em;
+    @media (max-width: 640px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    h4 {
+        font-size: clamp(0.8rem, 1vw, 1.2rem);
+        font-weight: 600;
+        color: #fc76ff;
+    }
+    p {
+        font-size: clamp(0.6rem, 1vw, 1rem);
+    }
+    .icon {
+        grid-column: 1/2;
+        @media (max-width: 640px) {
+            grid-area: 0/0/0/0;
+            display: none;
+        }
+        justify-self: center;
+        width: clamp(7em, 15vw, 15em);
+    }
+    .reach_us {
+        grid-column: 2/3;
+        @media (max-width: 640px) {
+            grid-area: 1/1/2/2;
+            width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: clamp(8em, 12vw, 12.4em);
+        justify-self: center;
+
+        > :nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+    }
+    .nav {
+        grid-column: 3/4;
+
+        @media (max-width: 640px) {
+            grid-area: 2/1/3/3;
+            width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        // outline: 2px solid blue;
+        justify-self: center;
+
+        > :nth-child(2) {
+            display: flex;
+            gap: clamp(1em, 3vw, 3em);
+            @media (max-width: 640px) {
+                gap: 7em;
+            }
+            p {
+                cursor: pointer;
+            }
+            > :nth-child(1) {
+                display: grid;
+                gap: 0.5em;
+            }
+            > :nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+            }
+        }
+    }
+    .connect {
+        grid-column: 4/5;
+        @media (max-width: 640px) {
+            grid-area: 1/2/2/3;
+            // width: 100%;
+            justify-self: center;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        // outline: 2px solid blue;
+        justify-self: center;
+
+        > :nth-child(2) {
+            display: flex;
+            gap: 0.5em;
+            img {
+                width: clamp(1em, 2vw, 2em);
+            }
+        }
+    }
+}

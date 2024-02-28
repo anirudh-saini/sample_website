@@ -1,0 +1,143 @@
+.nav {
+    width: 95%;
+    margin-inline: auto;
+}
+.sub_heading {
+    text-align: center;
+    padding-top: 2em;
+    width: 92%;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.service_content {
+    padding-block: 3em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: min(94%, 50em);
+    margin: auto;
+    text-align: center;
+}
+.bg {
+    position: relative;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    .bg1 {
+        img {
+            width: 100%;
+            height: 90em;
+            @media (max-width: 1315px) {
+                // outline: 2px solid red;
+                height: 76em;
+            }
+            @media (max-width: 1130px) {
+                // outline: 2px solid red;
+                height: 74em;
+            }
+            @media (max-width: 1080px) {
+                // outline: 2px solid red;
+                height: 72em;
+            }
+            @media (max-width: 1034px) {
+                // outline: 2px solid red;
+                height: 70em;
+            }
+            @media (max-width: 946px) {
+                // outline: 2px solid red;
+                height: 68em;
+            }
+            @media (max-width: 901px) {
+                // outline: 2px solid red;
+                height: 66em;
+            }
+            @media (max-width: 882px) {
+                // outline: 2px solid red;
+                height: 64em;
+            }
+            @media (max-width: 781px) {
+                // outline: 2px solid red;
+                height: 67em;
+            }
+            @media (max-width: 693px) {
+                // outline: 2px solid red;
+                height: 70em;
+            }
+            @media (max-width: 641px) {
+                // outline: 2px solid red;
+                display: none;
+            }
+        }
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .bg2 {
+        img {
+            width: 100%;
+            @media (max-width: 1484px) {
+                // outline: 2px solid red;
+                height: 93em;
+            }
+            @media (max-width: 1315px) {
+                // outline: 2px solid red;
+                height: 77em;
+            }
+            @media (max-width: 1132px) {
+                // outline: 2px solid red;
+                height: 76em;
+            }
+            @media (max-width: 1111px) {
+                // outline: 2px solid red;
+                height: 75em;
+            }
+            @media (max-width: 1086px) {
+                // outline: 2px solid red;
+                height: 73.6em;
+            }
+            @media (max-width: 1053px) {
+                // outline: 2px solid red;
+                height: 72.3em;
+            }
+            @media (max-width: 1022px) {
+                // outline: 2px solid red;
+                height: 71em;
+            }
+            @media (max-width: 1000px) {
+                // outline: 2px solid red;
+                height: 71.5em;
+            }
+            @media (max-width: 963px) {
+                // outline: 2px solid red;
+                height: 70em;
+            }
+            @media (max-width: 928px) {
+                // outline: 2px solid red;
+                height: 68.5em;
+            }
+            @media (max-width: 900px) {
+                // outline: 2px solid red;
+                height: 67.5em;
+            }
+            @media (max-width: 899px) {
+                // outline: 2px solid red;
+                height: 65.9em;
+            }
+            @media (max-width: 747px) {
+                outline: 2px solid red;
+                height: 69em;
+            }
+            @media (max-width: 654px) {
+                outline: 2px solid red;
+                height: 72em;
+            }
+            @media (max-width: 641px) {
+                // outline: 2px solid red;
+                display: none;
+            }
+        }
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -2;
+    }
+}

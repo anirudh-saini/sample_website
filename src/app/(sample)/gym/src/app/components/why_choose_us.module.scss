@@ -1,0 +1,53 @@
+.whyus {
+    display: grid;
+    gap: 3em;
+    padding-block: 6em;
+    width: min(76em, 90%);
+    margin: auto;
+    .head {
+        text-align: center;
+        h3 {
+            color: #fc76ff;
+            font-size: clamp(2.2rem, 3vw, 3rem);
+            font-weight: 700;
+        }
+        p {
+            color: white;
+            font-size: 1.6rem;
+        }
+    }
+    &_img {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        @media (max-width: 640px) {
+            flex-direction: column;
+        }
+        .item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            img {
+                background: linear-gradient
+                    (
+                        90deg,
+                        rgba(2, 0, 36, 1) 0%,
+                        rgba(0, 0, 0, 0.9103290974592962) 35%,
+                        rgb(0, 0, 0) 100%
+                    );
+            }
+            div {
+                position: absolute;
+                bottom: 0.5em;
+                text-align: center;
+                // outline: 2px solid red;
+
+                p {
+                    color: #fc76ff;
+                    font-size: clamp(1rem, 1vw, 1.25rem);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

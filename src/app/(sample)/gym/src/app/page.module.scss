@@ -1,0 +1,52 @@
+.nav {
+    position: relative;
+    .component {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 3;
+    }
+    &_cantent {
+        background-image: url("../../public/home_bg.png"),
+            linear-gradient(
+                90deg,
+                rgba(2, 0, 36, 1) 0%,
+                rgba(0, 0, 0, 0.9103290974592962) 35%,
+                rgb(0, 0, 0) 100%
+            );
+        background-repeat: no-repeat;
+        padding-block: 8em;
+        padding-inline: clamp(0.8em, 5vw, 5em);
+        background-size: cover;
+        background-position: center top;
+
+        > :nth-child(2) {
+            color: #fc76ff;
+        }
+        p {
+            font-weight: 700;
+            font-size: clamp(4.4em, 8vw, 8em);
+            color: white;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            // width: clamp(21em, 28vw, 28em);
+        }
+    }
+}
+.whyusmain {
+    background-color: #131313;
+}
+.booking {
+    background-color: #131313;
+    // outline: 50px solid red;
+}
+.footer {
+    background-color: #131313;
+    .copy {
+        text-align: center;
+        color: white;
+        font-size: clamp(0.8rem, 1vw, 1.2rem);
+    }
+    display: grid;
+    gap: 3em;
+    padding-block: 2em;
+}

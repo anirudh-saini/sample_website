@@ -1,0 +1,47 @@
+.card {
+    // outline: 2px solid red;
+
+    padding: 0.5em 0em 0.5em 0em;
+    color: white;
+    &_heading {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.menu {
+    width: clamp(18em, 42vw, 42em);
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+.select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+    @media (min-width: 672px) {
+        justify-content: center;
+    }
+
+    > :nth-child(odd) {
+        // outline: 2px solid red;
+        .heading {
+            p {
+                color: #e56217;
+                border-top: 0.2em solid #e56217;
+                border-bottom: 0.2em solid #e56217;
+                // outline: 2px solid red;
+            }
+        }
+    }
+    > :nth-child(even) {
+        // outline: 2px solid red;
+        .heading {
+            p {
+                color: #f49507;
+                border-top: 0.2em solid #f49507;
+                border-bottom: 0.2em solid #f49507;
+                // outline: 2px solid red;
+            }
+        }
+    }
+}

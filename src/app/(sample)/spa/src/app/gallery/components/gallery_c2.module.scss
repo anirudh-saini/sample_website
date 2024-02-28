@@ -1,0 +1,119 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: min(90%, 76em);
+    margin: auto;
+    p {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .img {
+        display: grid;
+        grid-template-columns: 41.8%, 24.3%, 33.7%;
+        grid-template-rows: 18em 16em 14em;
+        gap: 1em;
+        @media (max-width: 1000px) {
+            grid-template-rows: 16em 14em 12em;
+        }
+        @media (max-width: 850px) {
+            grid-template-rows: 16em 14em 12em;
+        }
+        @media (max-width: 800px) {
+            grid-template-rows: 12em 10em 8em;
+        }
+        @media (max-width: 640px) {
+            position: relative;
+
+            display: grid;
+            grid-template-columns: 100% 100% 100%;
+            grid-template-rows: repeat(2, 1fr);
+            overflow-x: scroll;
+
+            > * {
+                min-width: 100%;
+                scroll-snap-align: center;
+            }
+            overflow: auto hidden;
+            scroll-snap-type: inline mandatory;
+            // margin: auto;
+            scroll-behavior: smooth;
+            transition: all ease-in-out;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none;
+        }
+        .item1 {
+            grid-area: 1/1/2/4;
+            @media (max-width: 640px) {
+                grid-area: auto;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.3em;
+            }
+        }
+        .item2 {
+            grid-area: 1/4/3/6;
+            @media (max-width: 640px) {
+                grid-area: auto;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.3em;
+            }
+        }
+        .item3 {
+            grid-area: 1/6/3/9;
+            @media (max-width: 640px) {
+                grid-area: auto;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.3em;
+            }
+        }
+        .item4 {
+            // outline: 2px solid red;
+            grid-area: 2/1/4/4;
+            @media (max-width: 640px) {
+                grid-area: auto;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.3em;
+            }
+        }
+        .item5 {
+            // outline: 2px solid red;
+            grid-area: 3/4/4/7;
+            @media (max-width: 640px) {
+                grid-area: auto;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.3em;
+            }
+        }
+        .item6 {
+            // outline: 2px solid red;
+            grid-area: 3/7/4/9;
+            @media (max-width: 640px) {
+                grid-area: auto;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.3em;
+            }
+        }
+    }
+}

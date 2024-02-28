@@ -1,0 +1,161 @@
+.nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+
+    // outline: 2px solid red;
+    align-items: center;
+    padding: 0.5em 0.8em;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    @media (min-width: 640px) {
+        padding-block: clamp(0.5em, 1vw, 0.8em);
+        padding-inline: clamp(0.8em, 5vw, 5em);
+    }
+    .name {
+        // outline: 2px solid red;
+
+        img {
+            // outline: 2px solid red;
+            width: clamp(12em, 15vw, 15em);
+        }
+    }
+    .list {
+        // outline: 2px solid red;
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        height: 100dvb;
+        width: 100dvi;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: inset(0 0 0 100%);
+        transition: 300ms;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        // background-color: red;
+
+        &.open {
+            clip-path: inset(0);
+        }
+        @media (min-width: 640px) {
+            justify-content: right;
+            clip-path: none;
+            // min-height: 0;
+            height: auto;
+            background: transparent;
+            position: static;
+            align-items: start;
+        }
+        ul {
+            padding: 0;
+            display: flex;
+            // position: fixed;
+            flex-direction: column;
+            gap: 1.5em;
+            font-size: 1.8rem;
+            @media (min-width: 640px) {
+                flex-direction: row;
+                font-size: 1rem;
+                align-items: center;
+                margin: 0;
+                gap: clamp(0.8em, 7vw, 7em);
+            }
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    @media (min-width: 640px) {
+                        color: white;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .nav_icon {
+        position: relative;
+        // outline: 2px solid red;
+        @media (min-width: 40em) {
+            display: none;
+        }
+        .line {
+            position: absolute;
+            height: 0.2em;
+            width: 2em;
+            background-color: rgb(255, 255, 255);
+            transition: 0.4s ease;
+            bottom: 2em;
+            border-radius: 0.3em;
+            z-index: 4;
+            @media (min-width: 40em) {
+                display: none;
+            }
+        }
+
+        .line::before {
+            content: "";
+            position: absolute;
+            height: 0.2em;
+            width: 2em;
+            background-color: rgb(255, 255, 255);
+            top: -0.5em;
+            border-radius: 0.3em;
+            z-index: 4;
+            @media (min-width: 40em) {
+                display: none;
+            }
+        }
+
+        .input {
+            display: none;
+        }
+
+        .line::after {
+            content: "";
+            position: absolute;
+            height: 0.2em;
+            width: 2em;
+            background-color: rgb(255, 255, 255);
+            bottom: -0.5em;
+            border-radius: 0.3em;
+            z-index: 4;
+            @media (min-width: 40em) {
+                display: none;
+            }
+        }
+        #Toggle:checked + label #active {
+            transform: rotate(45deg);
+            background-color: black;
+        }
+
+        #Toggle:checked + label #active::before {
+            transform: rotate(-90deg) translateX(-0.5em);
+            background-color: black;
+        }
+
+        #Toggle:checked + label #active::after {
+            display: none;
+        }
+        #Toggle:checked + label #active {
+            transform: rotate(45deg);
+            background-color: black;
+        }
+        .Menu_container {
+            height: 4em;
+            width: 2em;
+            cursor: pointer;
+
+            // outline: 2px solid red;
+            @media (min-width: 40em) {
+                display: none;
+            }
+        }
+    }
+}

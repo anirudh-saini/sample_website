@@ -1,0 +1,59 @@
+.form {
+    // outline: 2px solid red;
+    position: relative;
+
+    .bg img {
+        position: absolute;
+        inset: top;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .content {
+        // width: 50%;
+        // background-color: #a7c3b5;
+        display: flex;
+        justify-content: right;
+        // outline: 2px solid red;
+        padding: 5em 0em;
+        @media (max-width: 640px) {
+            justify-content: center;
+        }
+        .sub_content {
+            // outline: 2px solid red;
+            text-align: center;
+            margin-inline: clamp(2em, 4vw, 4em);
+            margin-block: 4em;
+            display: grid;
+
+            gap: 1.4em;
+            width: 40%;
+            @media (max-width: 640px) {
+                width: 90%;
+            }
+            > div {
+                text-align: left;
+            }
+
+            h3 {
+                font-size: clamp(1.5rem, 2.25vw, 2rem);
+                font-weight: 700;
+            }
+            p {
+                font-size: clamp(1.2rem, 1.75vw, 1.5rem);
+            }
+            input {
+                background: transparent;
+                border: 0;
+                border-bottom: 0.1em solid black;
+            }
+            button {
+                border: none;
+                border-radius: 0.3em;
+                font-size: 1.25rem;
+                padding: 0.4em 0.6em;
+            }
+        }
+    }
+}
