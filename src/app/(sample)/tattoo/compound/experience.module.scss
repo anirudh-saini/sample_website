@@ -1,0 +1,36 @@
+.parent {
+	--overlay: hsl(0, 100%, 0%, 0.9);
+
+	background-image: linear-gradient(to bottom, var(--overlay) 2%, white);
+	display: flex;
+	justify-content: center;
+}
+
+.experience {
+	padding-block: 5em;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	width: min(94%, 74em);
+	margin: auto;
+	mask-image: linear-gradient(to bottom, transparent 2%, black) 2%;
+
+	.heading {
+		font-size: clamp(2rem, 2.75vw, 2.5rem);
+
+		text-align: center;
+		color: white;
+	}
+
+	.cards {
+		display: flex;
+		gap: 1em;
+
+		flex-direction: column;
+
+		@media (min-width: 48em) {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+}

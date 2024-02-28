@@ -1,0 +1,110 @@
+.about_nav {
+	background-image: url("../../../../../public/tattoo/art_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	.content {
+		// outline: 2px solid red;
+		text-align: center;
+		padding-block: 6em;
+		h3 {
+			font-size: clamp(3rem, 4vw, 4rem);
+			font-weight: 600;
+			color: white;
+		}
+	}
+}
+.about_content {
+	width: min(74em, 94%);
+	margin: auto;
+	margin-top: 5em;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	// gap: 3em;
+	&_text {
+		grid-column: 1/3;
+		width: 110%;
+
+		@media (max-width: 640px) {
+			grid-column: 1/5;
+			width: 100%;
+		}
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		p {
+			font-weight: 500;
+			font-size: clamp(0.8rem, 2vw, 1.3rem);
+		}
+		div {
+			@media (max-width: 640px) {
+				text-align: center;
+			}
+		}
+		a {
+			background-color: #982c17;
+			font-weight: 600;
+			font-size: clamp(0.8rem, 2vw, 1.3rem);
+			color: #fff;
+			padding: 0.7em 2em;
+			cursor: pointer;
+			border-radius: 0.8em;
+			text-decoration: none;
+		}
+	}
+	&_img {
+		grid-column: 3/5;
+
+		@media (max-width: 640px) {
+			grid-column: 0/0;
+		}
+		// outline: 2px solid red;
+		display: flex;
+		justify-content: end;
+
+		img {
+			@media (max-width: 640px) {
+				display: none;
+			}
+			width: 100%;
+			// outline: 2px solid red;
+		}
+	}
+}
+.about_img {
+	width: min(74em, 94%);
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	margin-block: 3em;
+	&_container {
+		--gap: 1em;
+		display: grid;
+		// grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+		gap: var(--gap);
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(min(17.2em, calc(50% - var(--gap) * 2)), 1fr)
+		);
+		img {
+			aspect-ratio: 1/1;
+			width: 100%;
+		}
+	}
+	.about_link {
+		text-align: center;
+		a {
+			background-color: #982c17;
+			color: white;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 1rem;
+			padding: 0.7em 1.5em;
+			border-radius: 0.8em;
+		}
+	}
+}
+.main_footer {
+	background-color: #151515;
+	padding-block: 3em;
+}
