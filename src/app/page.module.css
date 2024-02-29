@@ -1,0 +1,5 @@
+.main {
+    font-size: clamp(0.5em, 4vw, 4em);
+    font-weight: 700;
+    text-align: center;
+}

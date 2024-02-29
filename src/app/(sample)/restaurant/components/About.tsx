@@ -24,7 +24,7 @@ export default function About({ about }: AboutProps) {
                 <div className={styles.heading}>
                     <h3>{items.heading}</h3>
                     <p>{items.para}</p>
-                    {items.name && <p>{items.name}</p>}
+                    {items.name && <p className={styles.name}>{items.name}</p>}
                 </div>
                 <div className={styles.img}>
                     <img src={items.img} alt="card_img" />
