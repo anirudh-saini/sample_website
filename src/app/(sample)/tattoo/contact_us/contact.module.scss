@@ -85,6 +85,7 @@
                 width: clamp(19em, 28vw, 28em);
                 @media (max-width: 700px) {
                     width: 100%;
+                    padding-bottom: 2em;
                 }
                 input {
                     padding: 0.8em 0.8em;

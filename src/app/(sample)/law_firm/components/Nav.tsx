@@ -10,10 +10,10 @@ export default function Nav() {
                 <div className={style.contact}>
                     <div className={style.email}>
                         <div>
-                            <img src="/email.png" alt="" />
+                            <img src="/law_firm/email.png" alt="" />
                         </div>
                         <div>
-                            <img src="/email1.png" alt="" />
+                            <img src="/law_firm/email1.png" alt="" />
                         </div>
                         <p>info@youvebeenlawyered.com</p>
                     </div>
@@ -22,13 +22,13 @@ export default function Nav() {
                     </div>
                     <div className={style.img}>
                         <div>
-                            <img src="/flag1.png" alt="" />
+                            <img src="/law_firm/flag1.png" alt="" />
                         </div>
                         <div>
-                            <img src="/flag2.png" alt="" />
+                            <img src="/law_firm/flag2.png" alt="" />
                         </div>
                         <div>
-                            <img src="/flag3.png" alt="" />
+                            <img src="/law_firm/flag3.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -39,23 +39,27 @@ export default function Nav() {
             <div className={style.container}>
                 <nav className={style.nav}>
                     <div className={style.name}>
-                        <img src="/icon.png" alt="icon" />
+                        <img src="/law_firm/icon.png" alt="icon" />
                     </div>
                     <div
                         className={`${style.list} ${navOpen ? style.open : ""}`}
                     >
                         <ul>
                             <li>
-                                <Link href="/">Home</Link>
+                                <Link href="/law_firm">Home</Link>
                             </li>
                             <li>
-                                <Link href="/about_us">Client Reviews</Link>
+                                <Link href="/law_firm/about_us">
+                                    Client Reviews
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/careers">About Us</Link>
+                                <Link href="/law_firm/careers">About Us</Link>
                             </li>
                             <li>
-                                <Link href="/contact_us">Contact Us</Link>
+                                <Link href="/law_firm/contact_us">
+                                    Contact Us
+                                </Link>
                             </li>
                         </ul>
                     </div>
