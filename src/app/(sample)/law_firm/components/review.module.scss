@@ -1,47 +1,67 @@
 .review {
-    padding: 5em 5em;
-    position: relative;
-    // background-color: red;
-    backdrop-filter: blur(10px);
+	--bg: #2694ff;
 
-    .item {
-    }
-    .item1 {
-        position: relative;
-        padding: 5em 5em;
-        outline: 2px solid red;
-        div {
-            position: absolute;
-            top: -2.3em;
-        }
-    }
-    .item2 {
-        outline: 5px solid red;
-    }
-    .background {
-        position: absolute;
-        top: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        height: 100%;
-        // gap: 5em;
-        .bg1 {
-            // background-image: url("../../../../../public/law_firm/blue_bg.png");
-            background-position: center;
-            background-size: cover;
-            width: 30em;
-            height: 30em;
-            outline: 2px solid red;
-        }
-        .bg2 {
-            // background-image: url("../../../../../public/law_firm/blue_bg.png");
-            background-position: center;
-            background-size: cover;
-            width: 30em;
-            height: 30em;
-            outline: 2px solid red;
-        }
-    }
+	padding: 5em 5em;
+	position: relative;
+	z-index: 1;
+
+	&::before,
+	&::after {
+		content: "";
+		width: 14vi;
+		aspect-ratio: 1/1;
+		display: inline-block;
+
+		border-radius: 50%;
+
+		background-color: var(--bg);
+		filter: blur(100px);
+		position: absolute;
+		z-index: -1;
+	}
+
+	&::after {
+		right: 0;
+	}
+
+	.item {
+	}
+	.item1 {
+		position: relative;
+		padding: 5em 5em;
+		outline: 2px solid red;
+		div {
+			position: absolute;
+			top: -2.3em;
+		}
+	}
+	.item2 {
+		outline: 5px solid red;
+	}
+	.background {
+		position: absolute;
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 90%;
+		height: 100%;
+		// gap: 5em;
+		.bg1 {
+			// background-image: url("../../../../../public/law_firm/blue_bg.png");
+			background-position: center;
+			background-size: cover;
+			width: 30em;
+			height: 30em;
+			outline: 2px solid red;
+		}
+		.bg2 {
+			// background-image: url("../../../../../public/law_firm/blue_bg.png");
+			background-position: center;
+			background-size: cover;
+			width: 30em;
+			height: 30em;
+			outline: 2px solid red;
+		}
+	}
 }
