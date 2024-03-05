@@ -2,6 +2,7 @@ import styles from "./page.module.scss";
 import Get_help from "./components/Get_help";
 import Team from "../law_firm/components/Team";
 import Review from "./components/Review";
+
 export default function Home() {
     return (
         <main className={styles.main}>
