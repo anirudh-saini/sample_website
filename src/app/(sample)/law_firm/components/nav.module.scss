@@ -1,4 +1,8 @@
 .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
     .call {
         display: flex;
         height: 3em;
@@ -82,43 +86,48 @@
             }
         }
     }
+    .container {
+        background: #044584;
+        @media (min-width: 640px) {
+            background: rgba(0, 48, 104, 0.4);
+            backdrop-filter: blur(20px);
+        }
+    }
     .nav {
         position: relative;
         display: flex;
         justify-content: space-between;
-
+        width: min(90em, 96%);
+        margin: auto;
         align-items: center;
         // padding: 0.5em 0.8em;
         // padding-inline: 0.5em;
-        background: #044584;
+
         @media (min-width: 640px) {
-            outline: 2px solid red;
+            // outline: 2px solid red;
             padding-block: clamp(0.5em, 1vw, 0.8em);
             // padding-inline: clamp(0.8em, 5vw, 5em);
-            background: rgba(0, 48, 104, 0.4);
-
-            backdrop-filter: blur(20px);
         }
         .name {
             // outline: 2px solid red;
             img {
-                outline: 2px solid red;
+                // outline: 2px solid red;
                 width: clamp(10em, 14vw, 14em);
             }
         }
         .number {
-            outline: 2px solid red;
+            // outline: 2px solid red;
             display: none;
             @media (min-width: 640px) {
                 // width: 100%;
                 width: 13em;
                 display: inline;
-                font-size: clamp(0.7rem, 1vw, 1.25rem);
+                font-size: clamp(0.6rem, 1vw, 1.2rem);
                 font-weight: 700;
             }
         }
         .list {
-            outline: 2px solid red;
+            // outline: 2px solid red;
             position: fixed;
             background-color: rgb(255, 255, 255);
             height: 100dvb;
@@ -147,24 +156,25 @@
             }
             ul {
                 padding: 0;
+                margin: 0;
                 display: flex;
                 // position: fixed;
                 flex-direction: column;
                 gap: clamp(1.3em, 1vw, 1.5em);
                 font-size: clamp(1.8rem, 2vw, 2rem);
                 @media (min-width: 640px) {
-                    // justify-content: space-between;
+                    justify-content: space-between;
                     flex-direction: row;
-                    font-size: 1rem;
+
                     align-items: center;
-                    margin: 0;
-                    font-size: clamp(0.9rem, 1vw, 1.2rem);
-                    gap: clamp(0.2em, 7vw, 7em);
+
+                    font-size: clamp(0.7rem, 1vw, 1.2rem);
+                    gap: clamp(0.1em, 4vw, 4em);
                     font-weight: 500;
                 }
                 li {
                     list-style: none;
-                    outline: 2px solid red;
+                    // outline: 2px solid red;
                     a {
                         text-decoration: none;
                         color: black;

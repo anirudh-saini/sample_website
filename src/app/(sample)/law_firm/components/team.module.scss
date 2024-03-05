@@ -1,0 +1,27 @@
+.team {
+    width: min(78em, 94%);
+    margin: auto;
+    .head {
+        text-align: center;
+    }
+    .img {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        outline: 2px solid blue;
+        gap: 1em;
+        div {
+            justify-self: center;
+            text-align: center;
+
+            img {
+                aspect-ratio: 1/1.2;
+                width: 100%;
+            }
+            outline: 2px solid yellow;
+            div {
+                outline: 2px solid red;
+                // display: grid;
+            }
+        }
+    }
+}

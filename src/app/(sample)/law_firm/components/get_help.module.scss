@@ -1,0 +1,30 @@
+.help {
+    display: grid;
+    gap: 2em;
+    --opacity: 0.4;
+    padding-block: 9em;
+    background-image: url("../../../../../public/law_firm/get_help_bg.png"),
+        linear-gradient(90deg, #044484d3 20%, #044484cd 55%, #044484ad 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .head {
+        text-align: center;
+        width: min(74em, 92%);
+        margin: auto;
+    }
+    .button {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        width: min(74em, 92%);
+        margin: auto;
+        a {
+            color: #044584;
+            background-color: white;
+            border-radius: 0.9375rem;
+            padding: 0.5em 2em;
+            text-decoration: none;
+        }
+    }
+}

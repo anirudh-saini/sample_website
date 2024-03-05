@@ -1,0 +1,52 @@
+.hero {
+    position: relative;
+    --opacity: 0.4;
+    padding: 30em 0em 28em 0em;
+    text-align: center;
+    background-image: linear-gradient(
+            90deg,
+            hsl(0, 100%, 0%, var(--opacity)),
+            hsl(0, 100%, 0%, var(--opacity))
+        ),
+        url("../../../../public/law_firm/home_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    p {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .incident {
+        bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        > div {
+            border: 1px solid #fff;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            > :first-child {
+                // clip-path: inset(100% 0 0 0);
+                grid-row-start: 2;
+                grid-column-start: 1;
+                background: #003068;
+            }
+
+            > :last-child {
+                grid-row-start: 1;
+                grid-column-start: 1;
+                grid-row-end: 3;
+                background: #003068;
+                background-color: red;
+            }
+        }
+    }
+}
