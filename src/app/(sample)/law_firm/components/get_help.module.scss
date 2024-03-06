@@ -1,21 +1,39 @@
 .help {
     display: grid;
-    gap: 2em;
+    gap: 7em;
     --opacity: 0.4;
-    padding-block: 9em;
+    padding: 3em 0em 5em 0em;
     background-image: url("../../../../../public/law_firm/get_help_bg.png"),
-        linear-gradient(90deg, #044484d3 20%, #044484cd 55%, #044484ad 100%);
+        linear-gradient(90deg, #02376ce6 20%, #043a71e9 55%, #033d76e4 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (max-width: 640px) {
+        width: 90%;
+        margin: auto;
+        border-radius: 1em;
+    }
     .head {
         text-align: center;
         width: min(74em, 92%);
         margin: auto;
+        color: white;
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 3rem);
+        }
+        p {
+            font-size: 1.25rem;
+        }
     }
     .button {
         display: flex;
-        // flex-direction: column;
+        @media (max-width: 640px) {
+            flex-direction: column;
+            gap: 2em;
+            text-align: center;
+            max-width: 20em;
+        }
+
         justify-content: space-between;
         width: min(74em, 92%);
         margin: auto;
@@ -23,8 +41,18 @@
             color: #044584;
             background-color: white;
             border-radius: 0.9375rem;
-            padding: 0.5em 2em;
+            font-weight: 700;
             text-decoration: none;
+            font-size: clamp(1rem, 2vw, 1.5rem);
+        }
+        > :nth-child(1) {
+            padding-block: 0.5em;
+            padding-inline: clamp(2.5em, 4vw, 4em);
+        }
+        > :nth-child(2),
+        > :nth-child(3) {
+            padding-block: 0.5em;
+            padding-inline: clamp(3.5em, 5vw, 5em);
         }
     }
 }

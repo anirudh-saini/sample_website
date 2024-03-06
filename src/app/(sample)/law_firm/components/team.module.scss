@@ -1,14 +1,44 @@
+.overflow {
+    overflow: hidden;
+}
 .team {
     width: min(78em, 94%);
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-block: 8em;
+    // overflow: hidden;
     .head {
         text-align: center;
+        h3 {
+            font-size: 1.75rem;
+        }
+        p {
+            font-size: 1.25rem;
+        }
+        width: min(65em, 90%);
+        margin: auto;
     }
     .img {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        outline: 2px solid blue;
+        // outline: 2px solid red;
+        @media (max-width: 640px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 2em;
+        }
+        // outline: 2px solid blue;
         gap: 1em;
+        h5 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        p {
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
         div {
             justify-self: center;
             text-align: center;
@@ -17,10 +47,64 @@
                 aspect-ratio: 1/1.2;
                 width: 100%;
             }
-            outline: 2px solid yellow;
-            div {
+            // outline: 2px solid yellow;
+        }
+        > :nth-child(1) {
+            position: relative;
+            &::after {
+                @media (max-width: 640px) {
+                    display: none;
+                }
+                content: "";
+                position: absolute;
+                width: 14vi;
+                aspect-ratio: 1/1;
+                display: inline-block;
                 outline: 2px solid red;
-                // display: grid;
+                border-radius: 50%;
+                background-color: #2694ff;
+                bottom: 0;
+                left: -3em;
+                filter: blur(100px);
+                z-index: -1;
+            }
+        }
+        > :nth-child(2) {
+            position: relative;
+            &::after {
+                @media (max-width: 640px) {
+                    display: none;
+                }
+                content: "";
+                position: absolute;
+                width: 14vi;
+                aspect-ratio: 1/1;
+                display: inline-block;
+                outline: 2px solid red;
+                border-radius: 50%;
+                background-color: #2694ff;
+                top: -3em;
+                right: -3em;
+                filter: blur(100px);
+                z-index: -1;
+            }
+        }
+        > :nth-child(3) {
+            position: relative;
+            // overflow: hidden;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 14vi;
+                aspect-ratio: 1/1;
+                display: inline-block;
+                outline: 2px solid red;
+                border-radius: 50%;
+                background-color: #2694ff;
+                bottom: 0;
+                right: -3em;
+                filter: blur(100px);
+                z-index: -1;
             }
         }
     }

@@ -1,9 +1,11 @@
 .footer {
     .container {
-        width: min(76em, 96%);
-        margin: auto;
+        background-image: url("../../../../../public/law_firm/get_help_bg.png"),
+            linear-gradient(90deg, #044484d3 20%, #044484cd 55%, #044484ad 100%);
     }
     &_main {
+        width: min(76em, 96%);
+        margin: auto;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         outline: 2px solid red;
