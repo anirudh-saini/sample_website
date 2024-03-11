@@ -14,21 +14,21 @@ export default function team() {
                 </div>
                 <div className={style.img}>
                     <div>
-                        <img src="./law_firm/team1.png" alt="" />
+                        <img src="/law_firm/team1.png" alt="" />
                         <div>
                             <h5>Williams </h5>
                             <p>Founding Partner</p>
                         </div>
                     </div>
                     <div>
-                        <img src="./law_firm/team2.png" alt="" />
+                        <img src="/law_firm/team2.png" alt="" />
                         <div>
                             <h5> Tran</h5>
                             <p>Founding Partner</p>
                         </div>
                     </div>
                     <div>
-                        <img src="./law_firm/team3.png" alt="" />
+                        <img src="/law_firm/team3.png" alt="" />
                         <div>
                             <h5>Wong</h5>
                             <p>Founding Partner</p>

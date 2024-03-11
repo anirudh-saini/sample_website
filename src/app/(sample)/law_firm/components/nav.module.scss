@@ -89,7 +89,7 @@
     .container {
         background: #044584;
         @media (min-width: 640px) {
-            background: rgba(0, 48, 104, 0.4);
+            background: #00306866;
             backdrop-filter: blur(20px);
         }
     }
@@ -118,6 +118,7 @@
         .number {
             // outline: 2px solid red;
             display: none;
+            color: white;
             @media (min-width: 640px) {
                 // width: 100%;
                 width: 13em;
@@ -177,7 +178,7 @@
                     // outline: 2px solid red;
                     a {
                         text-decoration: none;
-                        color: black;
+                        color: rgb(255, 255, 255);
 
                         &:hover {
                             text-decoration: underline;

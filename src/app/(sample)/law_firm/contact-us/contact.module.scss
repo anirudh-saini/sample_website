@@ -1,0 +1,66 @@
+.contact {
+    margin: 10em 0 5em 0;
+    display: flex;
+    gap: 4em;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        h1 {
+            font-size: 3.25rem;
+            max-width: 10em;
+        }
+        .text {
+            display: flex;
+            gap: 1.5em;
+            padding-block-end: 3em;
+            border-bottom: 0.2em solid rgba(0, 0, 0, 0.6);
+            h4 {
+                color: #044584;
+                max-width: 10em;
+            }
+        }
+        .trusted {
+            outline: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            h3 {
+                font-size: 2.25rem;
+            }
+        }
+    }
+    .form {
+        width: clamp(22em, 35vw, 35em);
+        outline: 2px solid red;
+        &_contant {
+            h3 {
+                text-align: center;
+                background-color: #044584;
+                color: white;
+                padding-block: 1em;
+            }
+            .checkbox1 {
+                display: flex;
+                align-items: start;
+            }
+            .checkbox2 {
+                display: flex;
+                align-items: start;
+            }
+        }
+        .field {
+            display: flex;
+            gap: 2em;
+            .field1 {
+                display: flex;
+                flex-direction: column;
+            }
+            .field2 {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

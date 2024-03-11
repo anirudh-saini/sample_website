@@ -1,6 +1,6 @@
 .review {
     --bg: #2694ff;
-    padding-block: 2em;
+    padding: 1em 0em 4em 0em;
     // padding: 5em 5em;
     position: relative;
     z-index: 1;
@@ -9,34 +9,48 @@
     gap: clamp(0.3em, 1vw, 0.8em);
     justify-content: space-around;
     padding-inline: clamp(0.8em, 3vw, 2.5em);
+    width: min(86em, 98%);
+    margin: auto;
     button {
         border: none;
         background: transparent;
         cursor: pointer;
     }
-    // &::before,
-    // &::after {
-    //     content: "";
-    //     width: 14vi;
-    //     aspect-ratio: 1/1;
-    //     display: inline-block;
-    //     // outline: 2px solid red;
-    //     border-radius: 50%;
+    &::before,
+    &::after {
+        content: "";
+        width: 14vi;
+        aspect-ratio: 1/1;
+        display: inline-block;
+        outline: 2px solid red;
+        border-radius: 50%;
 
-    //     background-color: var(--bg);
-    //     filter: blur(100px);
-    //     position: absolute;
-    //     z-index: -1;
-    // }
-
-    // &::after {
-    //     right: 0;
-    // }
-
+        background-color: var(--bg);
+        filter: blur(100px);
+        @media (max-width: 640px) {
+            filter: blur(45px);
+        }
+        position: absolute;
+        z-index: -1;
+    }
+    &::before {
+        right: 4em;
+        top: 0em;
+        @media (max-width: 640px) {
+            top: 3em;
+        }
+    }
+    &::after {
+        left: 4em;
+        top: -2em;
+        @media (max-width: 640px) {
+            top: -0.5em;
+        }
+    }
     .item {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 1em;
+        gap: clamp(1.2em, 2vw, 2em);
         width: min(80em, 94%);
         padding-top: 4em;
         padding-inline: 1em;
@@ -47,6 +61,8 @@
         scroll-behavior: smooth;
     }
     .item1 {
+        background-color: rgba(255, 255, 255, 0.733);
+        // backdrop-filter: blur(100px);
         position: relative;
         padding: 2em 1em 0em 1em;
         margin-bottom: 2em;

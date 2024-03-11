@@ -1,0 +1,41 @@
+.about_head {
+    background-image: url("../../../../../public/law_firm/aboutbg.png");
+    height: 100dvb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h1 {
+        color: white;
+        font-size: 2.5rem;
+    }
+}
+.about_intro {
+    width: min(78em, 92%);
+    margin: auto;
+    padding-block: 2em;
+    font-size: 1.25rem;
+}
+.why_us {
+    width: min(78em, 92%);
+    margin: auto;
+    padding-block: 3em;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    h2 {
+        text-align: center;
+        font-size: 1.75rem;
+    }
+    h4 {
+        color: #044584;
+    }
+}

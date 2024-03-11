@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 2em;
+    &_cont {
+        display: flex;
+        justify-content: center;
+        p {
+            font-size: 0.9375rem;
+        }
+    }
+    .img {
+        display: flex;
+    }
+}

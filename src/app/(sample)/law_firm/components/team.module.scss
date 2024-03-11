@@ -53,7 +53,7 @@
             position: relative;
             &::after {
                 @media (max-width: 640px) {
-                    display: none;
+                    filter: blur(40px);
                 }
                 content: "";
                 position: absolute;
@@ -65,6 +65,7 @@
                 background-color: #2694ff;
                 bottom: 0;
                 left: -3em;
+
                 filter: blur(100px);
                 z-index: -1;
             }
@@ -73,7 +74,7 @@
             position: relative;
             &::after {
                 @media (max-width: 640px) {
-                    display: none;
+                    filter: blur(40px);
                 }
                 content: "";
                 position: absolute;
@@ -94,6 +95,9 @@
             // overflow: hidden;
             &::after {
                 content: "";
+                @media (max-width: 640px) {
+                    filter: blur(40px);
+                }
                 position: absolute;
                 width: 14vi;
                 aspect-ratio: 1/1;

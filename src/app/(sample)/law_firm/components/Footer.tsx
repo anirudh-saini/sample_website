@@ -7,7 +7,10 @@ export default function Footer() {
             <div className={Style.container}>
                 <div className={Style.footer_main}>
                     <div className={Style.item1}>
-                        <img src="./law_firm/icon.png" alt="icon" />
+                        <div>
+                            <img src="/law_firm/icon.png" alt="icon" />
+                        </div>
+
                         <p>
                             JusticeLink Legal stands as your steadfast ally in
                             legal matters. Our dedicated team of experts ensures
@@ -57,7 +60,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className={Style.copy}>
                 <p>Copyright 2024, All Rights Reserved to JusticeLinkLegal</p>
             </div>
         </div>

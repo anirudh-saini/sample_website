@@ -52,11 +52,16 @@ export default function Review() {
     });
     return (
         <div className={style.review}>
-            <button onClick={handlePrevClick}> &#11164;</button>
+            <button onClick={handlePrevClick}>
+                {" "}
+                <img src="/law_firm/arrow_pre.png" />
+            </button>
             <div className={style.item} ref={parentRef}>
                 {items}
             </div>
-            <button onClick={handleNextClick}>&#11166; </button>
+            <button onClick={handleNextClick}>
+                <img src="/law_firm/arrow_next.png" />
+            </button>
         </div>
     );
 }

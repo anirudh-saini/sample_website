@@ -18,7 +18,7 @@ export default function Home() {
             </div>
             <Team />
             <Get_help />
-            <div>
+            <div className={styles.review_head}>
                 <h3>Reviews of our Clients Speak Millions!</h3>
             </div>
             <Review />
