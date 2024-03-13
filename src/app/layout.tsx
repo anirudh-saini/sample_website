@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./global.scss";
-
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 const inter = Inter({ subsets: ["latin"] });
-
+config.autoAddCss = false;
 export const metadata: Metadata = {
     title: "Sample Websites",
     description: "Sample websites build my mennr",

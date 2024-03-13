@@ -1,15 +1,165 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 3em 2em;
+    padding: 2em 4em 3em 4em;
+    --bg: white;
+    background-color: var(--bg);
+    &.blue {
+        --bg: #d1e5f7;
+    }
+    @media (max-width: 760px) {
+        padding: 2em 2em 3em 2em;
+    }
     &_cont {
-        display: flex;
-        justify-content: center;
-        p {
-            font-size: 0.9375rem;
+        width: 100%;
+        .footer1 {
+            // outline: 2px solid red;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 0.5em;
+            @media (max-width: 760px) {
+                align-items: start;
+                justify-content: space-between;
+            }
+            img {
+                // outline: 2px solid green;
+            }
+
+            p {
+                font-size: clamp(0.7rem, 0.9vw, 0.9375rem);
+            }
+            .footerpara {
+                @media (max-width: 760px) {
+                    display: none;
+                }
+            }
+        }
+        .footer2 {
+            p {
+                font-size: clamp(0.7rem, 0.9vw, 0.9375rem);
+                @media (min-width: 759px) {
+                    display: none;
+                }
+            }
         }
     }
-    .img {
+    .img2 {
+        display: none;
+        @media (max-width: 760px) {
+            display: flex;
+            // outline: 2px solid blue;e
+            align-items: center;
+            gap: 0.4em;
+            a {
+                &.face {
+                    display: inline-grid;
+                    place-items: center;
+                    width: clamp(1.3rem, 1.5vw, 1.5rem);
+                    border-radius: 50%;
+                    aspect-ratio: 1;
+                    background-color: black;
+                    svg {
+                        color: white;
+                        font-size: clamp(0.8rem, 1vw, 1rem);
+                    }
+                }
+                &.insta {
+                    display: inline-grid;
+                    place-items: center;
+                    width: clamp(1.3rem, 1.5vw, 1.5rem);
+                    border-radius: 50%;
+                    aspect-ratio: 1;
+                    background-color: black;
+                    svg {
+                        color: white;
+                        font-size: clamp(0.8rem, 1vw, 1rem);
+                    }
+                }
+                &.link {
+                    display: inline-grid;
+                    place-items: center;
+                    width: clamp(1.3rem, 1.5vw, 1.5rem);
+                    border-radius: 50%;
+                    aspect-ratio: 1;
+                    background-color: black;
+                    svg {
+                        color: white;
+                        font-size: clamp(0.8rem, 1vw, 1rem);
+                    }
+                }
+                &.thread {
+                    display: inline-grid;
+                    place-items: center;
+                    width: clamp(1.3rem, 1.5vw, 1.5rem);
+                    border-radius: 50%;
+                    aspect-ratio: 1;
+                    background-color: black;
+                    svg {
+                        color: white;
+                        font-size: clamp(0.8rem, 1vw, 1rem);
+                    }
+                }
+            }
+        }
+    }
+    .img1 {
+        @media (max-width: 760px) {
+            display: none;
+        }
         display: flex;
+        // outline: 2px solid blue;e
+        align-items: center;
+        gap: 0.4em;
+        a {
+            &.face {
+                display: inline-grid;
+                place-items: center;
+                width: clamp(1.3rem, 1.5vw, 1.5rem);
+                border-radius: 50%;
+                aspect-ratio: 1;
+                background-color: black;
+                svg {
+                    color: white;
+                    font-size: clamp(0.8rem, 1vw, 1rem);
+                }
+            }
+            &.insta {
+                display: inline-grid;
+                place-items: center;
+                width: clamp(1.3rem, 1.5vw, 1.5rem);
+                border-radius: 50%;
+                aspect-ratio: 1;
+                background-color: black;
+                svg {
+                    color: white;
+                    font-size: clamp(0.8rem, 1vw, 1rem);
+                }
+            }
+            &.link {
+                display: inline-grid;
+                place-items: center;
+                width: clamp(1.3rem, 1.5vw, 1.5rem);
+                border-radius: 50%;
+                aspect-ratio: 1;
+                background-color: black;
+                svg {
+                    color: white;
+                    font-size: clamp(0.8rem, 1vw, 1rem);
+                }
+            }
+            &.thread {
+                display: inline-grid;
+                place-items: center;
+                width: clamp(1.3rem, 1.5vw, 1.5rem);
+                border-radius: 50%;
+                aspect-ratio: 1;
+                background-color: black;
+                svg {
+                    color: white;
+                    font-size: clamp(0.8rem, 1vw, 1rem);
+                }
+            }
+        }
     }
 }
