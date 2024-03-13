@@ -1,7 +1,8 @@
 .personal {
 	--w: 80em;
 	--min: 2;
-	--max: 6;
+	--max: 3;
+	--gap: 2em;
 
 	width: min(var(--w), 90%);
 	margin: auto;
@@ -12,7 +13,6 @@
 		padding-block: 0.5em;
 	}
 	&_img {
-		--gap: 2em;
 		// outline: 2px solid red;
 		padding-block: 5em;
 
@@ -21,7 +21,6 @@
 			--maxRem: calc(var(--w) - (var(--gap) * (var(--max) - 1)));
 
 			display: grid;
-			background-color: red;
 
 			grid-template-columns: repeat(
 				auto-fit,
