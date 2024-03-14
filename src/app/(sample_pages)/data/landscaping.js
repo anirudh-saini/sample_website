@@ -1,14 +1,9 @@
 export const data = {
-    head: ["Skill Traded Business"],
-    img: ["/gym.png", "/yoga.png", "/tattoo.png", "/spa.png"],
-    img_heading: ["Gym", "Yoga", "Tattoo Shop", "Spa "],
-    link: ["/gym", "/personal-care-business", "/tattoo", "/spa"],
-    text: [
-        "Click to View The Site",
-        "Coming Soon",
-        "Click to View The Site",
-        "Click to View The Site",
-    ],
+    head: ["Landscaping Business"],
+    img: ["/pest.png"],
+    img_heading: ["Pest Control"],
+    link: ["/landscaping-business"],
+    text: ["Coming Soon"],
 };
 export const review = [
     {

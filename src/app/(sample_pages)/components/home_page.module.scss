@@ -1,5 +1,9 @@
 .personal {
-    --w: 79em;
+    --w: 70em;
+    --min: 2;
+    --max: 3;
+    --gap: 2em;
+
     width: min(var(--w), 90%);
     margin: auto;
     &_heading {
@@ -9,19 +13,21 @@
         padding-block: 0.5em;
     }
     &_img {
-        --gap: 2em;
         // outline: 2px solid red;
         padding-block: 5em;
 
         .img {
+            --minRem: calc(100% - (var(--gap) * (var(--min) - 1)));
+            --maxRem: calc(var(--w) - (var(--gap) * (var(--max) - 1)));
+
             display: grid;
 
             grid-template-columns: repeat(
                 auto-fit,
                 minmax(
                     min(
-                        calc(50% - var(--gap)),
-                        calc((var(--w) - calc(var(--gap) * 2)) / 3)
+                        calc(var(--minRem) / var(--min)),
+                        calc(var(--maxRem) / var(--max))
                     ),
                     1fr
                 )
@@ -32,7 +38,6 @@
                 // outline: 2px solid red;
                 border-radius: 1.45rem 1.45rem 1.45rem 1.45rem;
                 overflow: hidden;
-                max-width: 25rem;
                 &_head {
                     background-color: #1c3752;
                     color: white;
@@ -43,6 +48,10 @@
                 &_img {
                     // outline: 5px solid red;
                     position: relative;
+                    img {
+                        width: 100%;
+                        aspect-ratio: 1/1.7;
+                    }
                     .view {
                         position: absolute;
                         top: 0;
@@ -144,3 +153,6 @@
         }
     }
 }
+// .bg_home {
+//     background-color: white;
+// }
