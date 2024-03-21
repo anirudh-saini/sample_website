@@ -1,0 +1,157 @@
+.blue {
+    background-color: #c6e3ff;
+    --top: 5em;
+}
+.contact {
+    // margin: 10em 0 5em 0;
+
+    --bottom: 5em;
+    padding-top: var(--top, 10em);
+    padding-bottom: var(--bottom);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8em;
+    // outline: 2px solid red;
+    width: min(85em, 94%);
+    margin-inline: auto;
+    @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        h1 {
+            max-width: 10em;
+            font-size: clamp(2rem, 3.25vw, 3.2rem);
+            @media (max-width: 750px) {
+                width: 100%;
+            }
+        }
+        .text {
+            display: flex;
+            gap: clamp(0.8em, 1.5vw, 1.5em);
+            padding-block-end: 3em;
+            border-bottom: 0.2em solid rgba(0, 0, 0, 0.6);
+            h4 {
+                color: #044584;
+                max-width: 10em;
+                font-weight: 600;
+                font-size: clamp(0.7rem, 1.3vw, 1.3rem);
+            }
+            @media (max-width: 750px) {
+                display: none;
+            }
+        }
+        .trusted {
+            // outline: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            > div {
+                img {
+                    width: clamp(22rem, 40vw, 40em);
+                }
+            }
+            h3 {
+                font-size: clamp(1.5rem, 1vw, 2.25rem);
+                font-weight: 600;
+            }
+            @media (max-width: 750px) {
+                display: none;
+            }
+        }
+    }
+    .form {
+        width: clamp(20em, 35vw, 35em);
+        // outline: 2px solid red;
+        border-radius: 1.25rem;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        background-color: white;
+
+        &_contant {
+            h3 {
+                text-align: center;
+                background-color: #044584;
+                color: white;
+                padding-block: 1em;
+                font-size: clamp(0.8rem, 1.12vw, 1.12rem);
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                padding: 1em 1.5em;
+
+                .checkbox1 {
+                    display: flex;
+                    align-items: start;
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
+                .checkbox2 {
+                    display: flex;
+                    align-items: start;
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
+                .field {
+                    display: flex;
+                    gap: clamp(1em, 2vw, 2em);
+                    justify-content: center;
+                    .field1 {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8em;
+                        input {
+                            border: none;
+                            border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
+                            font-size: clamp(0.7rem, 1.12vw, 1.12rem);
+                            width: 12em;
+                            @media (max-width: 750px) {
+                                width: clamp(10em, 12vw, 12em);
+                            }
+                        }
+                    }
+                    .field2 {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8em;
+                        input {
+                            border: none;
+                            border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
+                            font-size: clamp(0.7rem, 1.12vw, 1.12rem);
+                            width: 12em;
+                            @media (max-width: 750px) {
+                                width: clamp(10em, 12vw, 12em);
+                            }
+                        }
+                    }
+                }
+                .button {
+                    text-align: center;
+                    button {
+                        width: clamp(10em, 14vw, 14em);
+                        font-size: clamp(1rem, 1.1vw, 1.125rem);
+                        font-weight: 700;
+                        border-radius: 0.9375rem;
+                        background: #044584;
+                        border: none;
+                        color: white;
+                        padding-block: 0.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+.bg_contact {
+    @media (max-width: 750px) {
+        background-color: #c6e3ff;
+    }
+}

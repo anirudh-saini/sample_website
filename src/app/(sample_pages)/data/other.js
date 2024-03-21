@@ -2,8 +2,8 @@ export const data = {
     head: ["Other Small Businesses"],
     img: ["/law.png", "/restaurant.png"],
     img_heading: ["Law Firm", "Restaurant"],
-    link: ["/other-small-businesses", "/restaurant"],
-    text: ["Coming Soon", "Click to View The Site"],
+    link: ["/law_firm", "/restaurant"],
+    text: ["Click to View The Site", "Click to View The Site"],
 };
 export const review = [
     {

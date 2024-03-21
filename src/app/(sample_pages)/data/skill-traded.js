@@ -2,12 +2,8 @@ export const data = {
     head: ["Skill Traded Business"],
     img: ["/hvac.png", "/home_impro.png", "/contractors.png"],
     img_heading: ["HVAC", "Home Improvement", "Contractors"],
-    link: [
-        "/skill-traded-business",
-        "/skill-traded-business",
-        "/skill-traded-business",
-    ],
-    text: ["Coming Soon", "Coming Soon", "Coming Soon"],
+    link: ["/HVAC", "/skill-traded-business", "/skill-traded-business"],
+    text: ["Click to View The Site", "Coming Soon", "Coming Soon"],
 };
 export const review = [
     {

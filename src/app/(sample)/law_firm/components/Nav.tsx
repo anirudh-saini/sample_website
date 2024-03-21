@@ -49,15 +49,15 @@ export default function Nav() {
                                 <Link href="/law_firm">Home</Link>
                             </li>
                             <li>
-                                <Link href="/law_firm/about_us">
+                                <Link href="/law_firm/reviews">
                                     Client Reviews
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/law_firm/careers">About Us</Link>
+                                <Link href="/law_firm/about-us">About Us</Link>
                             </li>
                             <li>
-                                <Link href="/law_firm/contact_us">
+                                <Link href="/law_firm/contact-us">
                                     Contact Us
                                 </Link>
                             </li>
