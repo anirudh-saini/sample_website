@@ -1,0 +1,149 @@
+.container {
+    background-color: #fdf3ec;
+    .hero {
+        background-image: url(../../../../public/pest/home_hero.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        @media (max-width: 640px) {
+            background-position: right;
+        }
+        > div {
+            width: min(85em, 94%);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            color: white;
+            // width: clamp(5em, 20vw, 20em);
+            a {
+                background-color: #ec4731;
+                color: white;
+                text-decoration: none;
+                padding-block: 0.5em;
+                padding-inline: 1em;
+                border-radius: 0.625rem;
+                width: 10em;
+                text-align: center;
+            }
+            @media (max-width: 640px) {
+                text-align: center;
+                align-items: center;
+                height: 60vh;
+
+                a {
+                    display: none;
+                }
+            }
+            h1 {
+                font-size: clamp(3.7rem, 6vw, 6rem);
+                font-weight: 600;
+                width: clamp(8em, 20vw, 20em);
+                // outline: 2px solid red;
+                text-shadow: 2px 2px black;
+                @media (max-width: 640px) {
+                    text-align: center;
+                    width: clamp(5em, 8vw, 8em);
+                }
+            }
+            height: 100vh;
+        }
+    }
+    .book {
+        display: flex;
+        justify-content: center;
+        margin-block: 1em;
+        @media (min-width: 641px) {
+            display: none;
+        }
+        a {
+            background-color: #ec4731;
+            color: white;
+            text-decoration: none;
+            padding-block: 0.5em;
+            padding-inline: 1em;
+            border-radius: 0.625rem;
+        }
+    }
+    .carousel1 {
+        width: min(85em, 94%);
+        margin: auto;
+
+        h3 {
+            color: #ec4731;
+            font-weight: 600;
+            font-size: 1.75rem;
+        }
+        p {
+            font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+        }
+        @media (max-width: 640px) {
+            text-align: center;
+        }
+    }
+    .carousel2 {
+        width: min(85em, 94%);
+        margin: auto;
+        margin-top: 2em;
+        h3 {
+            color: #ec4731;
+            font-weight: 600;
+            font-size: 1.75rem;
+        }
+        p {
+            font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+        }
+        @media (max-width: 640px) {
+            text-align: center;
+        }
+    }
+    .pest {
+        width: min(85em, 94%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 2em;
+        @media (max-width: 640px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        p {
+            font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+        }
+        > :nth-child(1) {
+            @media (max-width: 640px) {
+                display: none;
+            }
+        }
+        > :nth-child(2) {
+            text-align: right;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.5em, 1vw, 1em);
+            @media (max-width: 640px) {
+                width: 100%;
+                text-align: center;
+                // outline: 2px solid red;
+            }
+            > div {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 2em;
+                @media (max-width: 640px) {
+                    justify-content: center;
+                }
+                a {
+                    background-color: #ec4731;
+                    color: white;
+                    text-decoration: none;
+                    cursor: pointer;
+                    padding-block: 0.5em;
+                    padding-inline: 1.8em;
+                    border-radius: 0.625rem;
+                    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+                }
+            }
+        }
+    }
+}

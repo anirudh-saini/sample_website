@@ -1,0 +1,88 @@
+.footer {
+    //
+    background-color: #09141f;
+    color: white;
+    @media (min-width: 640px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // justify-content: space-between;
+    }
+    > :nth-child(2) {
+        clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+        @media (min-width: 640px) {
+            grid-area: 1/1/2/2;
+            clip-path: none;
+            img {
+                // width: 100%;
+                height: 100%;
+                clip-path: polygon(0 0, 78% 0, 97% 100%, 0% 100%);
+            }
+        }
+    }
+    > :nth-child(1) {
+        grid-area: 1/2/2/3;
+        padding-block: 1em;
+        padding-inline: 1em;
+        display: grid;
+        gap: 1em;
+        > :nth-child(1) {
+            display: flex;
+            align-items: center;
+            img {
+                width: clamp(12em, 14.7vw, 14.7em);
+            }
+        }
+        > :nth-child(2) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: clamp(2em, 3vw, 3em);
+            // justify-content: space-between;
+            h5 {
+                font-size: clamp(1.1rem, 1.25vw, 1.25rem);
+                font-weight: 600;
+            }
+            p {
+                font-size: clamp(0.9rem, 1.12vw, 1.12rem);
+                font-weight: 500;
+            }
+            a {
+                font-size: clamp(1rem, 1.25vw, 1.25rem);
+                font-weight: 500;
+                color: white;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            > :nth-child(1) {
+                display: flex;
+                flex-direction: column;
+                gap: clamp(0.5em, 1vw, 1em);
+                > :nth-child(4) {
+                    display: flex;
+                    gap: 0.5em;
+                    img {
+                        width: clamp(1.4em, 2vw, 2em);
+                        aspect-ratio: 1/1;
+                    }
+                }
+                // outline: 2px solid red;
+            }
+            > :nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                gap: clamp(0.5em, 1vw, 1em);
+                > div {
+                    // outline: 2px solid red;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                }
+            }
+        }
+        > :nth-child(3) {
+            text-align: center;
+            p {
+                font-size: clamp(0.7rem, 1.12vw, 1.12rem);
+            }
+        }
+    }
+}

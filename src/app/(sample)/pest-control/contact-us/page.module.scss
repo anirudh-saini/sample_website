@@ -1,0 +1,92 @@
+.contact {
+    background-color: #fdf3ec;
+
+    .form {
+        width: min(85em, 94%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(0.8em, 1vw, 1em);
+
+        padding-top: 2em;
+        padding-bottom: 2em;
+        @media (max-width: 640px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            padding-bottom: 1em;
+        }
+        > :nth-child(1) {
+            img {
+                height: 100%;
+            }
+        }
+        input {
+            font-size: clamp(1rem, 1.25vw, 1.25rem);
+            border: 0.1em solid #ec4731;
+        }
+        textarea {
+            font-size: clamp(1rem, 1.25vw, 1.25rem);
+            border: 0.1em solid #ec4731;
+        }
+        a {
+            font-size: clamp(1rem, 1.25vw, 1.25rem);
+            background-color: #ec4731;
+            padding-block: 0.3em;
+            padding-inline: 0.8em;
+            width: 6em;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 0.6em;
+        }
+        > :nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.8em, 1vw, 1em);
+            > :nth-child(4) {
+                height: 12em;
+            }
+        }
+    }
+    &_detail {
+        display: flex;
+        justify-content: space-between;
+        width: min(85em, 94%);
+        margin: auto;
+        padding-bottom: 3em;
+        padding-top: 2em;
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            padding-top: 0;
+        }
+        div {
+            // outline: 2px solid red;
+            @media (max-width: 640px) {
+                text-align: center;
+            }
+        }
+        > :nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            div {
+                display: flex;
+                gap: 0.5em;
+                img {
+                    width: clamp(1.4em, 1.8vw, 1.8em);
+                }
+            }
+        }
+        h6 {
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            font-weight: 600;
+        }
+        p {
+            font-size: clamp(0.8rem, 1.25vw, 1.25rem);
+        }
+    }
+}

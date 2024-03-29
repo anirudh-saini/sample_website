@@ -1,0 +1,30 @@
+.test {
+    background-color: #fdf3ec;
+    .submit {
+        text-align: center;
+        display: grid;
+        gap: 2em;
+        width: min(85em, 94%);
+        margin: auto;
+        p {
+            font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+        }
+        a {
+            background-color: #fdf3ec;
+            border: 0.1em solid #ec4731;
+            padding-block: 0.5em;
+            padding-inline: 1em;
+            color: black;
+            text-decoration: none;
+            transition: all 1ms ease-in-out;
+            border-radius: 0.6em;
+            font-size: clamp(1.1rem, 1.25vw, 1.25rem);
+            width: clamp(12em, 18vw, 18em);
+            justify-self: center;
+            &:hover {
+                color: white;
+                background-color: #ec4731;
+            }
+        }
+    }
+}

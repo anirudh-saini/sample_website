@@ -1,0 +1,29 @@
+.contact {
+    width: min(78em, 92%);
+    margin: auto;
+    padding-block: 2em;
+    @media (min-width: 640px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0.4em, 1vw, 1em);
+        p {
+            width: 12.1em;
+            font-size: clamp(1rem, 1.25vw, 1.25rem);
+        }
+        h1 {
+            font-size: clamp(2.2rem, 3vw, 3rem);
+            font-weight: 500;
+        }
+        a {
+            color: #a41e21;
+            font-size: clamp(1rem, 1.25vw, 1.25rem);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}

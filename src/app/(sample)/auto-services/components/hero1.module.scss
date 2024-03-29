@@ -1,0 +1,38 @@
+.hero {
+    height: 100vh;
+    background: url("../../../../../public/auto_services/bg_home.png"),
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.713) 0%,
+            rgba(0, 0, 0, 0.761) 0%
+        );
+    background-repeat: no-repeat;
+    background-position: 50% 2em;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    .button {
+        padding-bottom: 5em;
+        button {
+            width: clamp(16.5em, 37.2vw, 37.2em);
+            background-color: #a41e21;
+            border-radius: 1.70213rem;
+            border: none;
+            color: white;
+            font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+            padding-block: 0.3em;
+            cursor: pointer;
+        }
+    }
+    .para {
+        padding-bottom: 5em;
+        width: clamp(20em, 43vw, 43em);
+        p {
+            font-weight: 700;
+            text-align: center;
+            font-size: clamp(2.3rem, 3.75vw, 3.75rem);
+            color: white;
+        }
+    }
+}

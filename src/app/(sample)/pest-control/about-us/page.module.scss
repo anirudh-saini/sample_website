@@ -1,0 +1,34 @@
+.about {
+    background-color: #fdf3ec;
+    .carousel1 {
+        width: min(85em, 94%);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding-top: 2em;
+        > :nth-child(2) {
+            text-align: right;
+            @media (max-width: 640px) {
+                text-align: center;
+            }
+        }
+        > :nth-child(4) {
+            text-align: right;
+            @media (max-width: 640px) {
+                text-align: center;
+            }
+        }
+        h3 {
+            color: #ec4731;
+            font-weight: 600;
+            font-size: 1.75rem;
+        }
+        p {
+            font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+        }
+        @media (max-width: 640px) {
+            text-align: center;
+        }
+    }
+}

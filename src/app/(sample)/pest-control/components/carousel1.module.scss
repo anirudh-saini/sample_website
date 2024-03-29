@@ -1,0 +1,99 @@
+.main_container {
+    padding: 2em 0em 4em 0em;
+    .radio {
+        // outline: 2px solid red;
+        display: none;
+        @media (max-width: 640px) {
+            display: flex;
+            justify-content: center;
+            input {
+                // color: #ec4731;
+                accent-color: #ec4731;
+                // background-color: #ec4731;
+            }
+        }
+    }
+    .carousel {
+        .button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.625rem;
+            a {
+                background-color: #ec4731;
+                color: white;
+                text-decoration: none;
+                cursor: pointer;
+                padding-block: 0.5em;
+                padding-inline: 1.8em;
+                border-radius: 0.625rem;
+                font-size: clamp(1rem, 1.25vw, 1.25rem);
+            }
+        }
+        text-align: center;
+        h5 {
+            font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+            font-weight: 500;
+        }
+        p {
+            font-size: clamp(1rem, 1.25vw, 1.25rem);
+        }
+    }
+    .container {
+        --w: 85em;
+        --min: 2;
+        --max: 3;
+        --gap: 2em;
+        width: min(var(--w), 94%);
+        margin: auto;
+        display: grid;
+        --minRem: calc(100% - (var(--gap) * (var(--min) - 1)));
+        --maxRem: calc(var(--w) - (var(--gap) * (var(--max) - 1)));
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(
+                min(
+                    calc(var(--minRem) / var(--min)),
+                    calc(var(--maxRem) / var(--max))
+                ),
+                1fr
+            )
+        );
+        gap: var(--gap);
+        @media (max-width: 640px) {
+            display: flex;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            scroll-snap-align: center;
+            scroll-snap-type: inline mandatory;
+            overscroll-behavior-inline: contain;
+            overflow-y: hidden;
+        }
+        div {
+            @media (max-width: 640px) {
+                min-width: 100%;
+                scroll-snap-align: center;
+            }
+            .img {
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    border-radius: 0.625rem;
+                }
+            }
+        }
+        > :nth-child(3) {
+            // outline: 2px solid red;
+            .img {
+                // z-index: -1;
+                position: relative;
+            }
+        }
+    }
+}

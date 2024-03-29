@@ -1,0 +1,158 @@
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.5);
+        > div {
+            width: min(85em, 94%);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: 0.5em;
+            .burger {
+                display: flex;
+                gap: 0.5em;
+                // outline: 2px solid red;
+                justify-content: space-between;
+                width: 100%;
+                @media (min-width: 640px) {
+                    width: auto;
+                }
+                .input {
+                    display: none;
+                }
+                label {
+                    --bg: white;
+
+                    display: grid;
+                    gap: 6.4px;
+                    z-index: 100;
+                    position: relative;
+                    // padding: 0.5em;
+
+                    &.open {
+                        --bg: black;
+
+                        :nth-child(2) {
+                            --bg: white;
+                        }
+
+                        :nth-child(1) {
+                            rotate: 45deg;
+                            translate: 0 350%;
+                        }
+
+                        :nth-child(3) {
+                            rotate: -45deg;
+                            translate: 0 -225%;
+                        }
+                    }
+                    span {
+                        width: 32px;
+                        height: 3px;
+                        background-color: var(--bg);
+
+                        transition: background-color 300ms ease,
+                            rotate 300ms linear, translate 300ms linear;
+                    }
+                }
+                > :nth-child(1) {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: clamp(6em, 10.9vw, 10.9em);
+                    }
+                }
+                > :nth-child(2) {
+                    display: flex;
+                    align-items: center;
+                    // width: 8em;
+                }
+                @media (min-width: 640px) {
+                    .label {
+                        display: none;
+                        // outline: 2px solid red;
+                    }
+                }
+            }
+            .list {
+                // outline: 2px solid red;
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                height: 100dvb;
+                width: 100dvi;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                clip-path: inset(0 0 0 100%);
+                transition: 300ms;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                // background-color: red;
+                @media (min-width: 640px) {
+                    clip-path: none;
+                    // min-height: 0;
+                    height: auto;
+                    width: auto;
+                    background: transparent;
+                    position: static;
+                    align-items: start;
+                    // justify-content: space-between;
+                    // justify-content: right;
+                }
+                &.open {
+                    clip-path: inset(0);
+                }
+                ul {
+                    padding: 0;
+                    display: flex;
+                    // position: fixed;
+                    flex-direction: column;
+                    gap: 1.5em;
+                    font-size: 1.8rem;
+
+                    @media (min-width: 640px) {
+                        flex-direction: row;
+                        // align-items: center;
+                        gap: clamp(0.5em, 2.5vw, 2.5em);
+                        margin: 0;
+                        // outline: 2px solid green;
+                    }
+                    > :nth-child(7) {
+                        a {
+                            background-color: #ec4731;
+                            padding-inline: 0.5em;
+                            padding-block: 0;
+                            border-radius: 0.3125rem;
+                            @media (min-width: 640px) {
+                                padding-block: 0.5em;
+                            }
+                        }
+                    }
+                    li {
+                        list-style: none;
+                        // outline: 2px solid red;
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-size: 2rem;
+                            @media (min-width: 640px) {
+                                color: white;
+                                font-size: clamp(0.63rem, 1.25vw, 1.25rem);
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

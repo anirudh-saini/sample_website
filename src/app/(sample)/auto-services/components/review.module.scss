@@ -1,0 +1,91 @@
+.review {
+    background-color: white;
+    padding-block: 2em;
+    > div {
+        width: min(84em, 95%);
+        margin: auto;
+        text-align: center;
+        display: grid;
+        gap: 2em;
+        > :nth-child(1) {
+            h3 {
+                font-size: clamp(1.9rem, 3vw, 3rem);
+                font-weight: 500;
+            }
+        }
+        > :nth-child(2) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 2.5em;
+            column-gap: 1em;
+            @media (min-width: 640px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .item {
+                > :nth-child(1) {
+                    font-size: clamp(2.6rem, 3.1vw, 3.1rem);
+                    font-weight: 500;
+                }
+                > :nth-child(2) {
+                    font-size: clamp(1rem, 1.25vw, 1.25rem);
+                }
+            }
+        }
+    }
+}
+.review2 {
+    background-image: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.224) 0%
+        ),
+        url("../../../../../public/auto_services/review_bg.png");
+    background-position: center;
+    background-size: cover;
+    > div {
+        width: min(84em, 95%);
+        margin: auto;
+        color: white;
+        display: grid;
+        gap: 3em;
+        padding-block: 4em;
+        @media (min-width: 700px) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: clamp(0.5em, 4vw, 4em);
+            row-gap: clamp(2.5em, 4vw, 4em);
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(2px);
+            border-radius: 0.625rem;
+            // outline: 2px solid red;
+            width: clamp(18em, 37.2vw, 37.2em);
+            height: clamp(14.5em, 15.2vw, 15.2em);
+            padding-inline: 1em;
+            padding-bottom: 1em;
+            justify-self: center;
+            h4 {
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
+            }
+            p {
+                font-size: clamp(0.9rem, 1.25vw, 1.25rem);
+            }
+            > :nth-child(1) {
+                display: flex;
+                gap: 1em;
+                // position: relative;
+                align-items: last baseline;
+                // outline: 2px solid red;
+                // transform: translate(0%, -50%);
+                img {
+                    // position: relative;
+                    margin-top: -2em;
+                    aspect-ratio: 1/1;
+                    // top: -2em;
+                    // flex-shrink: 0;
+                    width: 4.5em;
+                }
+            }
+        }
+    }
+}

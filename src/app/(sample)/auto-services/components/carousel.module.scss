@@ -1,0 +1,46 @@
+.carousel {
+    overflow: hidden;
+    margin-block: 2em;
+    h3 {
+        width: clamp(21.4rem, 45.9vw, 45.9rem);
+        margin: auto;
+        text-align: center;
+        font-size: clamp(2.25rem, 3vw, 3rem);
+        font-weight: 600;
+        // outline: 2px solid red;
+    }
+    div {
+        display: flex;
+        width: min(85em, 94%);
+        margin: auto;
+        padding-block: 2em;
+        gap: 3em;
+        animation: rotate 10s linear infinite;
+        img {
+            // outline: 2px solid red;
+            align-self: center;
+            justify-self: center;
+        }
+        @media (min-width: 640px) {
+            // outline: 2px solid red;
+            animation: none;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+
+            width: min(80em, 95%);
+            margin: auto;
+            > :nth-child(n + 9):nth-child(-n + 16) {
+                display: none;
+            }
+        }
+        @keyframes rotate {
+            0% {
+                translate: 0;
+            }
+
+            100% {
+                translate: -820px;
+            }
+        }
+    }
+}

@@ -2,8 +2,8 @@ export const data = {
     head: ["Automobile"],
     img: ["/automoblie.png"],
     img_heading: ["Auto Services"],
-    link: ["/automobile"],
-    text: ["Coming Soon"],
+    link: ["/auto-services"],
+    text: ["Click to View The Site"],
 };
 export const review = [
     {

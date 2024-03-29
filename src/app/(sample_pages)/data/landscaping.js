@@ -2,8 +2,8 @@ export const data = {
     head: ["Landscaping Business"],
     img: ["/pest.png"],
     img_heading: ["Pest Control"],
-    link: ["/landscaping-business"],
-    text: ["Coming Soon"],
+    link: ["/pest-control"],
+    text: ["Click to View The Site"],
 };
 export const review = [
     {

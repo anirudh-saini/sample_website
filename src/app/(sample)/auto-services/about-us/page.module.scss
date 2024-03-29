@@ -1,0 +1,39 @@
+.about {
+    width: min(84em, 92%);
+    margin: auto;
+    padding-block: 3em;
+    .content {
+        p {
+            font-weight: 600;
+            font-size: clamp(1.25rem, 1.35vw, 1.35rem);
+        }
+    }
+    .story {
+        padding-block: 3em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        h3 {
+            text-align: center;
+            font-size: clamp(2.5rem, 3.25vw, 3.25rem);
+        }
+        > :nth-child(2) {
+            display: grid;
+            gap: 2em;
+            @media (min-width: 640px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            > :nth-child(1) {
+                display: flex;
+                justify-content: center;
+            }
+            p {
+                font-weight: 500;
+                font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+            }
+            img {
+                border-radius: 1.25rem;
+            }
+        }
+    }
+}

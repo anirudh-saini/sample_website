@@ -1,0 +1,62 @@
+.content {
+    --w: 85em;
+    --min: 2;
+    --max: 2;
+    --gap: 2em;
+    @media (max-width: 1000px) {
+        --min: 1;
+    }
+    width: min(var(--w), 94%);
+    margin: auto;
+    display: grid;
+    --minRem: calc(100% - (var(--gap) * (var(--min) - 1)));
+    --maxRem: calc(var(--w) - (var(--gap) * (var(--max) - 1)));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            min(
+                calc(var(--minRem) / var(--min)),
+                calc(var(--maxRem) / var(--max))
+            ),
+            1fr
+        )
+    );
+    gap: var(--gap);
+    padding-block: 2em;
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        > :nth-child(1) {
+            h4 {
+                color: #ec4731;
+                font-weight: 600;
+                font-size: clamp(1.5rem, 1.75vw, 1.75rem);
+            }
+            p {
+                font-size: clamp(0.8rem, 1.25vw, 1.25rem);
+            }
+        }
+        > :nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+
+            p {
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
+            }
+            a {
+                background-color: #ec4731;
+                padding-inline: 0.8em;
+                padding-block: 0.4em;
+                color: white;
+                text-decoration: none;
+                cursor: pointer;
+                border-radius: 0.3em;
+                font-size: clamp(1rem, 1.25vw, 1.25rem);
+                width: 7em;
+                text-align: center;
+            }
+        }
+    }
+}

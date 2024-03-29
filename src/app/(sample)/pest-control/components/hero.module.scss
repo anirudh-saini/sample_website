@@ -1,0 +1,67 @@
+.hero {
+    .heading {
+        background-image: url("../../../../../public/pest/home_hero.png");
+        background-repeat: no-repeat;
+        background-position: center 20%;
+        background-size: cover;
+        height: 85vh;
+        @media (max-width: 640px) {
+            background-position: right;
+            height: 60vh;
+        }
+        > div {
+            width: min(85em, 94%);
+            margin: auto;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            // outline: 2px solid red;
+            justify-content: center;
+            height: 100%;
+            @media (max-width: 640px) {
+                h1 {
+                    display: none;
+                }
+                p {
+                    display: none;
+                }
+                h2 {
+                    text-shadow: 2px 2px 5px black;
+                    text-align: center;
+                    font-size: clamp(2.8rem, 3.75vw, 3.75rem);
+                }
+            }
+            h1 {
+                font-size: clamp(3.2rem, 6vw, 6rem);
+                font-weight: 600;
+            }
+            h2 {
+                font-size: clamp(2.2rem, 3.75vw, 3.75rem);
+                font-weight: 600;
+            }
+            p {
+                font-size: clamp(1rem, 1.75vw, 1.75rem);
+                width: 28em;
+                // outline: 2px solid red;
+                text-shadow: 2px 2px 5px black;
+            }
+        }
+    }
+    .para {
+        display: none;
+        @media (max-width: 640px) {
+            display: block;
+            background-color: #fdf3ec;
+            // outline: 2px solid red;
+        }
+        > div {
+            width: min(85em, 94%);
+            margin: auto;
+            p {
+                font-size: clamp(1rem, 1.75vw, 1.75rem);
+                text-align: center;
+                padding-block: 1em;
+            }
+        }
+    }
+}
