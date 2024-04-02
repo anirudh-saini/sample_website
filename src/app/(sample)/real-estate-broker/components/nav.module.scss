@@ -2,24 +2,13 @@
     z-index: 1;
 
     &bar {
-        // position: absolute;
+        position: absolute;
         width: 100%;
-        .discount {
-            background-color: #151515;
-
-            // position: absolute;
-            p {
-                text-align: center;
-                color: white;
-                font-weight: 600;
-                font-size: clamp(0.875rem, 1vw, 1rem);
-                padding: 0.8em 3.5em;
-            }
-        }
         .menu {
             display: flex;
             justify-content: space-between;
-            background: rgba(0, 0, 0, 0.571);
+            flex-direction: row-reverse;
+            background: rgba(0, 0, 0, 0.22);
             padding-inline: 1em;
             // outline: 2px solid red;
             @media (min-width: 640px) {
@@ -36,12 +25,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                clip-path: inset(0 100% 0 0);
+                clip-path: inset(0 0 0 100%);
                 transition: 300ms;
                 top: 0;
                 left: 0;
                 z-index: 3;
-
+                // outline: 2px solid blue;
                 &.open {
                     clip-path: inset(0);
                 }
@@ -51,7 +40,7 @@
                     height: auto;
                     background: transparent;
                     position: static;
-                    align-items: start;
+                    align-items: center;
                 }
                 ul {
                     padding: 0;
@@ -59,6 +48,7 @@
                     flex-direction: column;
                     gap: 1.5em;
                     font-size: 1.8rem;
+                    // outline: 2px solid brown;
                     @media (min-width: 640px) {
                         flex-direction: row;
                         font-size: 1rem;
@@ -71,7 +61,7 @@
                         @media (min-width: 640px) {
                             display: block;
                             img {
-                                height: 4em;
+                                // height: 4em;
                             }
                         }
                     }
@@ -87,6 +77,11 @@
                                 text-decoration: underline;
                             }
                         }
+                        img {
+                            width: clamp(6rem, 12vw, 12rem);
+                            aspect-ratio: 3/0.5;
+                            // outline: 2px solid red;
+                        }
                     }
                 }
             }
@@ -100,7 +95,7 @@
                     position: absolute;
                     height: 0.2em;
                     width: 2em;
-                    background-color: white;
+                    background-color: #9bafd3;
                     transition: 0.4s ease;
                     bottom: 2em;
                     border-radius: 0.3em;
@@ -115,7 +110,7 @@
                     position: absolute;
                     height: 0.2em;
                     width: 2em;
-                    background-color: white;
+                    background-color: #9bafd3;
                     top: -0.5em;
                     border-radius: 0.3em;
                     z-index: 4;
@@ -133,7 +128,7 @@
                     position: absolute;
                     height: 0.2em;
                     width: 2em;
-                    background-color: white;
+                    background-color: #9bafd3;
                     bottom: -0.5em;
                     border-radius: 0.3em;
                     z-index: 4;
@@ -170,8 +165,12 @@
                 }
             }
             .logo {
+                // outline: 2px solid red;
+                display: flex;
+                align-items: center;
                 img {
-                    height: 4em;
+                    width: clamp(6rem, 12vw, 12rem);
+                    aspect-ratio: 3/0.5;
                 }
                 @media (min-width: 640px) {
                     display: none;

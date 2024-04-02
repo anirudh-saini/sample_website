@@ -9,9 +9,9 @@ export default function Nav() {
     return (
         <div className={style.nav}>
             <div className={style.navbar}>
-                <div className={style.discount}>
+                {/* <div className={style.discount}>
                     <p>Book your first tattoo online with us and get 20% off</p>
-                </div>
+                </div> */}
 
                 <div className={style.menu}>
                     <div className={style.nav_icon}>
@@ -40,27 +40,31 @@ export default function Nav() {
                     >
                         <ul>
                             <li>
-                                <Link href="/tattoo/">Home</Link>
+                                <Link href="/real-estate-broker">Home</Link>
                             </li>
                             <li>
-                                <Link href="/tattoo/artists">Artists</Link>
+                                <Link href="/real-estate-broker/properties">
+                                    Properties
+                                </Link>
                             </li>
                             <li>
-                                <img src="/tattoo/logo.svg" alt="logo" />
+                                <img src="/real-estate/logo.png" alt="logo" />
                             </li>
                             <li>
-                                <Link href="/tattoo/about_us">About</Link>
+                                <Link href="/real-estate-broker/events">
+                                    Events
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/tattoo/contact_us">
-                                    Contact Us
+                                <Link href="/real-estate-broker/testimonials">
+                                    Testimonials
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
                     <div className={style.logo}>
-                        <img src="/tattoo/logo.svg" alt="logo" />
+                        <img src="/real-estate/logo.png" alt="logo" />
                     </div>
                 </div>
             </div>
