@@ -85,3 +85,127 @@
         }
     }
 }
+.map {
+    // outline: 2px solid red;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    // margin: auto;
+
+    iframe {
+        width: 100%;
+        aspect-ratio: 1/0.24;
+        @media (max-width: 1200px) {
+            aspect-ratio: 1/0.3;
+        }
+        @media (max-width: 960px) {
+            aspect-ratio: 1/0.45;
+        }
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
+
+    .map_content {
+        position: absolute;
+        // outline: 2px solid rgb(7, 66, 185);
+        width: clamp(16em, 19vw, 19rem);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(1.2em, 1.5vw, 1.5em);
+        background-color: rgba(64, 64, 64, 0.9);
+        margin-right: clamp(5em, 16vw, 16em);
+        padding-block: 2em;
+        @media (max-width: 680px) {
+            margin-right: 3.5em;
+        }
+        @media (max-width: 640px) {
+            position: static;
+            width: 100%;
+            margin: 0;
+            align-items: start;
+            // outline: 2px solid red;
+        }
+
+        h5 {
+            font-size: clamp(1.03rem, 1.2vw, 1.2rem);
+            font-weight: 600;
+            line-height: clamp(1.3rem, 1.2vw, 1.2rem);
+            color: white;
+        }
+        p {
+            font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+            line-height: clamp(1.17rem, 1.3vw, 1.3rem);
+            color: #d4d4d4;
+            padding: 0;
+            margin: 0;
+            span {
+                color: white;
+            }
+        }
+        > div {
+            // outline: 2px solid red;
+            width: 13.752em;
+            display: grid;
+            gap: clamp(0.8em, 1vw, 1em);
+            @media (max-width: 640px) {
+                width: 90%;
+                margin: auto;
+                // outline: 2px solid red;
+            }
+            .contact {
+                > div {
+                    display: flex;
+                    // outline: 2px solid red;
+                    align-items: center;
+                    gap: 0.2em;
+                    img {
+                        width: 0.8em;
+                        // height: 0.7em;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+            .time {
+                display: flex;
+                // outline: 2px solid red;
+                align-items: center;
+                gap: 0.2em;
+                img {
+                    width: 0.8em;
+                    // height: 0.7em;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+}
+.copy {
+    background-color: #2d2d2d;
+    > div {
+        width: min(80%, 62em);
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        color: white;
+        padding-block: 0.5em;
+        @media (max-width: 640px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        > div {
+            display: flex;
+            gap: clamp(0.5em, 0.8vw, 0.8em);
+            img {
+                width: 1.5rem;
+                // outline: 2px solid red;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
